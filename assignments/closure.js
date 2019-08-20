@@ -5,6 +5,21 @@
 // The outer scope can be a parent function, or the top level of the script.
 
 
+function nameString(name){
+  let firstName = 'Tony';
+  let lastName = 'Kovar';
+  let age = 26;
+  console.log(`Hello I am ${firstName} ${lastName} and I am ${age} years old.`);
+  function newName(){
+    let newFirstName = 'James';
+    let newLastName = 'Dunken';
+    console.log(`Hello. I've decided to change my name from ${firstName} ${lastName} to ${newFirstName} ${newLastName}.`)
+  }
+  console.log(newName());
+};
+
+nameString();
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
