@@ -99,9 +99,23 @@ let largeDonation = [];
 let bigDono = runners.filter(largeSum => largeSum.donation >= 200);
 console.log(bigDono);
 
-// Problem 2
-let howManyCompanies = [];
-
+// let howManyCompanies = [];
+// Problem 2 - The race director decided to hire a band to play during and after the race and wants to let the runners know. Pull everyone's full name and email so that we can inform them.
+let contactInfo = [];
+runners.forEach((contact) => contactInfo.push(`${contact.first_name} ${contact.last_name} ` + contact.email) );
+console.log(contactInfo);
 
 
 // Problem 3: 
+let runnerIdsForKwimbee = [];
+// let kwimbeeId = runners.filter(compId => compId.company_name === 'Kwimbee');
+// console.log(runnerIdsForKwimbee);
+
+function kwimbeeId(arr){
+  return runners.filter(function(item){
+    return item.company_name === 'Kwimbee'
+  })
+};
+
+console.log(kwimbeeId(runners));
+
